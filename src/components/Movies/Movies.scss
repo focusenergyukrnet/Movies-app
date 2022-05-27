@@ -1,0 +1,17 @@
+@import '../../variables.scss';
+
+.Movies {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: #eee;
+    padding: 20px;
+
+    @include media(576px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(992px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

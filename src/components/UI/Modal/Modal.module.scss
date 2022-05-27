@@ -1,0 +1,58 @@
+.Modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+.Opened {
+    animation: openModal 400ms ease-in-out forwards;
+}
+
+.Closed {
+    animation: closeModal 400ms ease-in-out forwards;
+}
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+        top: 0%;
+        transform: translate(-50%, -100vw);
+    }
+
+    70% {
+        opacity: 1;
+        top: 50%;
+        transform: translate(-50%, -20%);
+    }
+
+    100% {
+        opacity: 1;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        opacity: 1;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    30% {
+        opacity: 1;
+        top: 50%;
+        transform: translate(-50%, -20%);
+    }
+
+    100% {
+        opacity: 0;
+        top: 0%;
+        transform: translate(-50%, -100vw);
+    }
+}

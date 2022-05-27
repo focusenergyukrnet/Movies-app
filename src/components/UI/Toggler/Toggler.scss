@@ -1,0 +1,41 @@
+@import '../../../variables.scss';
+
+.Toggler {
+    font-size: 1.8rem;
+    color: #fff;
+    justify-content: center;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    box-shadow: 0 0 15px darken(#b306b3, 20%);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b306b3;
+    cursor: pointer;
+    animation: toggleToggler 300ms ease forwards;
+
+    // &.Shown {
+    //    animation: toggleToggler 300ms ease forwards;     
+    // } // не нужен
+
+    &.Hidden {
+        animation: toggleToggler 300ms ease forwards alternate-reverse;
+    }
+
+    @include media(576px) {
+        display: none;
+    }
+}
+
+@keyframes toggleToggler {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

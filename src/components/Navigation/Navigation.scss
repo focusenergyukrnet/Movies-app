@@ -1,0 +1,30 @@
+.Navigation {
+    ul {
+        list-style-type: none;
+        display: flex;
+        font-family: Arial;
+    
+        a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 
+                color 200ms ease,
+                text-decoration 200ms ease;
+    
+            &:hover,
+            &.Active {
+                text-decoration: underline;
+                color: #b306b3;
+            }
+        }
+
+        li:last-child {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            cursor: pointer; 
+        }
+    }
+}

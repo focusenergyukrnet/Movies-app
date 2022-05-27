@@ -1,0 +1,44 @@
+// .Toolbar {
+//     padding: 20px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background-color: rgba(black, .8);
+// }
+
+
+@import '../../variables.scss';
+
+.Toolbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(black, .8);
+
+    .Navigation {
+        display: none;
+
+        @include media(576px) {
+            display: block;
+
+            .fas {
+                display: none;
+            }
+        }
+    }
+
+    .Input {
+        min-width: 100px;
+        max-width: 180px;
+        width: 100%;
+
+        @include media(768px) {
+            max-width: 250px;
+        }
+
+        @include media(992px) {
+            max-width: 350px;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.FavoriteMovies {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.Table {
+    border-spacing: 0;
+    font-family: Arial;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.TableHead {
+    th {
+        background-color: #ccc;
+        padding: 8px 20px;
+        font-size: 0.9rem;
+        font-weight: normal;
+
+        &:first-child {
+            border-radius: 5px 0 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 5px 0 0;
+        }
+    }
+}
+
+.TableBody {
+    td {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+        font-weight: normal;
+        border-bottom: 1px solid #ccc;
+        transition: background-color 200ms ease;
+    }
+}
+
+.TableRow {
+    cursor: pointer;
+
+    &:hover {
+        td {
+            background-color: #eee;
+        }
+    }
+
+    &:last-child {
+        td {
+            border-bottom: none;
+        }
+    }
+}
+
+.Image {
+    width: 120px;
+}
+
+.Overview {
+    vertical-align: top;
+    text-align-last: left;
+}
+
+.Icon {
+    [data-adult=false] {
+        color: #d21616;
+    }
+
+    [data-adult=true] {
+        color: lime;
+    }
+}
+
+.Conversation {
+    margin-bottom: 20px;
+}
+
+.BtnsWrapper {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,45 @@
+.Button {
+    border: none;
+    color: #fff;
+    background-color: #b306b3;
+    font-size: 1rem;
+    border-radius: 3px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: 
+        background-color 200ms ease,
+        text-shadow 200ms ease,
+        transform 50ms ease;
+
+    &:hover {
+        background-color: darken(#b306b3, 10%);
+        text-shadow: 0 0 3px #fff;
+    }
+
+    &:active {
+        transform: scale(.95);
+    }
+
+    &.Disabled {
+        background-color: #a19f9f;
+        cursor: not-allowed;
+
+        &:hover {
+            background-color: #a19f9f;
+            text-shadow: none;
+        }
+
+        &:active {
+            transform: none;
+        }
+    }
+
+    &.Danger {
+        background-color: #d70c0c;
+
+        &:hover {
+           background-color: darken(#d70c0c, 10%); 
+        }
+    }
+}
+
